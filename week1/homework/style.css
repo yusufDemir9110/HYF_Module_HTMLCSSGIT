@@ -1,0 +1,245 @@
+:root{
+    --color-primary:rgb(35, 42, 97);
+    --color-secondary:rgb(240, 240, 240);
+}
+
+body{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-size: 18px;
+    background-color: var(--color-secondary);
+    font-family:Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color:black;
+    
+}
+li{
+    margin:20px 0;
+}
+
+li p{
+    padding-top:0;
+    margin-top: 0;
+    font-size: 1rem;
+}
+h3,h4{
+    margin:5px;
+}
+
+
+header{
+    margin:30px;
+    padding: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    background: linear-gradient(180deg, var(--color-primary) 50%,var(--color-secondary) 50%);
+}
+.title{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.title h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+.title h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:var(--color-primary)
+}
+#second{
+    right:0;
+    top:50;
+}
+.profile-img{
+    position:relative;
+    border: 5px solid var(--color-secondary);
+}
+
+img, .profile-img{
+    height: 30vh;
+    border-radius: 50%;
+    
+}
+#img1{
+    transition: opacity 0.5s ease;
+}
+
+#img2{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    transition: opacity 0.5s ease;
+
+}
+
+.profile-img:hover #img1{
+    opacity:0;
+}
+.profile-img:hover #img2 {
+    opacity:1;
+   
+}
+summary{
+    position: relative;
+    margin:30px;
+    padding: 30px;
+}
+
+article{
+    position: relative;
+    width: 60%;
+    padding: 20px;
+}
+
+aside{
+    position: relative;
+    width: 35%;
+    padding: 20px;
+    margin-right: 5%;
+}
+section{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 30px;
+        
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin:30px;
+    padding: 20px;
+    background-color: var(--color-primary);
+    border-radius: 0 0 30px 30px;
+}
+
+
+
+.frame{
+    border: 2px solid var(--color-primary);
+    border-top:8px solid var(--color-primary);
+    border-radius: 0 10px 10px 0;
+}
+
+
+
+
+
+.frame-head h3{
+    margin:0;
+    
+}
+
+p{
+    text-indent: 15px;
+    
+}
+
+i{
+    margin:5px 10px;
+    padding: 10px; 
+    border-radius: 5px;   
+}
+.communication,.experience{
+    margin-top:30px;
+}
+
+.communication>a:hover i{
+    color:var(--color-secondary);
+    background-color: black;
+    
+}
+.communication>a:hover {
+    text-decoration: underline;
+    
+
+}
+.communication i:nth-child(1){
+    position: absolute;
+}
+
+i:nth-child(2){
+    opacity:0;
+    
+}
+
+.communication>a:hover i:nth-child(1){
+    opacity:0
+}
+.communication>a:hover i:nth-child(2){
+    opacity: 1;
+}
+
+
+
+.fa-brands {
+    color: white;
+    padding: 20px;
+}
+.fa-brands:hover{
+    color:var(--color-primary);
+    background-color: white;
+    
+}
+
+.frame-head {
+    
+    position: absolute;
+    width: 40%;
+    top: 0;
+    left: 0;
+    padding: 5px 40px;
+    border-radius: 0 0 20px 0;
+    color: white;
+    background-color: var(--color-primary);
+    transition: width 0.5s ease-in;
+   
+}
+summary:hover .frame-head{
+    width: 60%;   
+}
+aside:hover .frame-head {
+    width: 60%;
+}
+article:hover .frame-head {
+    width: 60%;
+}
+
+@media screen and (max-width:960px){
+    
+    
+    section {
+            flex-direction: column;
+            
+    }
+    aside{
+        width:100%;
+        padding: 0;
+    }
+    article{
+        width:100%;
+        padding: 0;
+        margin-top:30px;
+    }
+    .communication, .experience, .education{
+        margin:40px 20px;
+    }
+    .frame-head{
+        width:50%;
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+    
+}
